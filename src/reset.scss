@@ -5,15 +5,19 @@ body {
   padding: 0;
 }
 
+body > div[id*="single-spa-application"] {
+  height: 100%;
+}
+
 body{
   background: #f8f8f8;
   overflow: hidden;
 }
- 
+
 * {
   font-size: 14px;
 }
- 
+
 a {
   color: $--color-text-primary;
   text-decoration: none;
@@ -35,4 +39,10 @@ img {
 
 i,em {
   font-style: normal;
+}
+
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li:not(.active) {
+  background-color: transparent !important;
 }

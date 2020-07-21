@@ -1,0 +1,64 @@
+.app-forum{
+  height: 100%;
+  &-navbar {
+    background: #fff;
+    height: 60px;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.35);
+    >div{
+      width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+      ul,.app-forum-navbar-title{
+        width: 100%;
+      }
+      .app-forum-navbar-title {
+        position: relative;
+        &:before{
+          content: "";
+          display: block;
+          width: 1px;
+          height: 15px;
+          background: #eee;
+          position: absolute;
+          left: -20px;
+          top: 38%;
+        }
+      }
+      >div{
+        display: flex;
+        align-items: center;
+        .el-badge{
+          position: relative;
+          top: 5px;
+          // margin-left: 48px;
+          margin: 0 40px;
+        }
+      }
+    }
+  }
+  &-container {
+    height: calc(100% - 61px);
+    overflow: scroll;
+    .superManage{
+      margin-left:auto;
+      margin-right: auto;
+      background: #fff;
+    }
+    .replay-line+ .replay-line{
+      border-top: 1px solid #ededed;
+    }
+    .el-divider {
+      margin-left: -20px;
+      margin-right: -20px;
+      width: auto;
+      margin-top: 0;
+    }
+  }
+  &-create {
+    height: 100%;
+    background: #fff;
+  }
+}

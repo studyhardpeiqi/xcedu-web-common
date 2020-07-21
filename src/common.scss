@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+.fl {
+  float: left;
+}
+
 .fr {
   float: right;
 }
@@ -39,11 +43,25 @@
   color: #999;
 }
 
+.bg-grey {
+  background-color: #f8f8f8;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
 .padding-top-size-mini {
   padding-top: 5px
 }
 
-.padding-left-size-mix {
+.padding-top-size-mix {
   padding-top: 10px
 }
 
@@ -119,11 +137,66 @@
   padding-bottom: 30px
 }
 
+.padding-left-right-size-mini {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.padding-left-right-size-mix {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.padding-left-right-size-small {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.padding-left-right-size-nomal {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.padding-left-right-size-large {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.padding-top-bottom-size-mini {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.padding-top-bottom-size-mix {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.padding-top-bottom-size-small {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.padding-top-bottom-size-nomal {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.padding-top-bottom-size-large {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.margin-lr-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .margin-top-size-mini {
   margin-top: 5px
 }
 
-.margin-left-size-mix {
+.margin-top-size-mix {
   margin-top: 10px
 }
 
@@ -267,12 +340,33 @@
   font-size: 20px;
 }
 
-.pointer{
+.bold {
+  font-weight: bold;
+}
+
+.pointer {
   cursor: pointer;
 }
 
+.auto-width{
+  width: 1200px;
+}
+
+.auto-boxshadow {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.theme-append {
+  .el-input-group__append {
+    background-color: $--color-primary;
+    color: #fff;
+    border-color: $--color-primary;
+  }
+}
+
 .size-nomal-dialog {
-  .el-dialog__body{
+  .el-dialog__body {
     height: 590px;
     overflow: auto;
   }
@@ -308,8 +402,8 @@ section {
     background-color: rgba(0, 0, 0, .2);
   }
 }
- 
-.app-content--windowopen--standalone{
+
+.app-content--windowopen--standalone {
   position: absolute;
   width: 100%;
   height: calc(100% - 100px);
@@ -321,11 +415,11 @@ section {
 .el-dialog__header {
   padding      : 10px 20px;
   border-bottom: 1px solid $--color-primary;
-  height: 50px; 
+  height: 50px;
   line-height: 32px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   line-height: 50px;
-  box-sizing: border-box;  
+  box-sizing: border-box;
 }
 
 .el-table__body .oprate-icon-groups i:hover {
@@ -334,7 +428,7 @@ section {
 
 .el-dialog__footer {
   padding: 0;
-  position: absolute; 
+  position: absolute;
   top     : 8px;
   right   : 60px;
 }
@@ -343,7 +437,7 @@ section {
 }
 .el-dialog__title{
   line-height: 32px;
-} 
+}
 
 .el-dialog__wrapper {
   display    : flex;
@@ -493,3 +587,6 @@ section {
   }
 }
 
+.advance-search-container{
+  box-shadow: inset 0 3px 1px rgba(0,0,0,.05) ;
+}

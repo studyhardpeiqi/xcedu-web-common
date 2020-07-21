@@ -43,7 +43,13 @@ function uglifyVendor () {
     .pipe(uglify())
     .pipe(dest('./build'))
 }
-
+function vendorPolyfill () {
+  return src([
+    './polyfill/minified.js'
+  ]).pipe(dest('dist/polyfill'))
+    .pipe(gizp({ threshold: '1kb', level: 7 }))
+    .pipe(dest('dist/polyfill'))
+}
 function vendorSpa () {
   return src([
     './node_modules/single-spa/lib/umd/single-spa.min.js',
@@ -133,7 +139,9 @@ function xceduTheme (theme) {
       './src/common.scss',
       './src/pages/navbar.scss',
       './src/pages/user.scss',
-      './src/pages/email.scss'
+      './src/pages/email.scss',
+      './src/pages/testBank.scss',
+      './src/pages/forum.scss'
     ])
       .pipe(concat(`common-${theme}.scss`))
       .pipe(sass({ outputStyle: 'compressed' }))
@@ -160,4 +168,4 @@ function xcedCommonAssets () {
 
 const xceduCommon = parallel(xcedCommonScripts, xcedCommonTheme, xcedCommonAssets)
 
-exports.build = parallel(vendorFramework, vendorElement, xceduCommon)
+exports.build = parallel(vendorFramework, vendorElement, vendorPolyfill, xceduCommon)
