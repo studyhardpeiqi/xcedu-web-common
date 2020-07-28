@@ -1,0 +1,88 @@
+.app-comprehensiveQuality {
+    position: absolute;
+    width: calc(100% - 100px);
+    top: 20px;
+    padding: 0 50px;
+    bottom: 0;
+    overflow: auto;
+    .app-comprehensiveQuality-section {
+        height: 100%;
+    
+        .nav-bar {
+          width       : 220px;
+          margin-right: 15px;
+          background  : #fff;
+          height      : 100%;
+          position    : fixed;
+          overflow    : auto;
+          .el-menu {
+            border-right: 0 none;
+            margin-top  : 10px;
+            &-item{
+              >i {
+                margin-right: 8px;
+                font-size   : 16px;
+              }
+              &.is-active {
+                background : $--color-primary-light-9;
+                border-left: 4px solid $--color-primary;
+                span {
+                  color      : #303133;
+                  font-weight: bold
+                }
+              }
+            }
+          }
+          &-title{
+            margin             : 30px 20px 10px 20px;
+            p{
+              text-align: center
+            }
+            >div{
+              width          : 80px;
+              height         : 80px;
+              border-radius  : 10px;
+              display        : flex;
+              align-items    : center;
+              justify-content: center;
+              margin         : 0 auto;
+              * {
+                font-size: 35px;
+                color    : #fff
+              }
+            }
+          }
+          &-btn{
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            >span {
+              display        : flex;
+              justify-content: center;
+              align-items    : center
+            }
+            *{
+              font-style: normal;
+              color     : #fff
+            }
+          }
+        }
+        .layout-list-content {
+          background: #fff;
+          width     : calc(100% - 250px);
+          min-height: 100%;
+          position  : relative;
+          left      : 240px;
+          box-sizing: border-box;
+    
+          &-search-btn-groups {
+            display        : flex;
+            justify-content: flex-end;
+    
+            >.el-dropdown+.el-dropdown {
+              margin-left: 10px;
+            }
+          }
+        }
+    }
+}

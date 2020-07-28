@@ -138,15 +138,10 @@ function xceduTheme (theme) {
       './src/reset.scss',
       './src/icon.scss',
       './src/common.scss',
-      './src/pages/navbar.scss',
-      './src/pages/user.scss',
-      './src/pages/email.scss',
-      './src/pages/testBank.scss',
-      './src/pages/forum.scss'
+      './src/pages/**'
     ])
       .pipe(concat(`common-${theme}.scss`))
       .pipe(sass({ outputStyle: 'compressed' }))
-      .pipe(rev())
       .pipe(dest('dist/widget'))
       .pipe(gizp({ level: 7 }))
       //  当前 css 较小， 所以去掉 threshold 统一打包出来的文件名称
