@@ -8,7 +8,6 @@ const sass = require('gulp-sass')
 const babel = require('gulp-babel')
 const wrap = require('gulp-exports')
 const replace = require('gulp-replace')
-const rev = require('gulp-rev');
 const args = require('yargs').argv
 
 sass.compiler = require('node-sass')
@@ -50,6 +49,15 @@ function vendorPolyfill () {
   ]).pipe(dest('dist/polyfill'))
     .pipe(gizp({ threshold: '1kb', level: 7 }))
     .pipe(dest('dist/polyfill'))
+}
+function vendorXcBase () {
+  return src([
+    './xcbase/*.js'
+  ]).pipe(concat('xcbase.js'))
+    .pipe(replace(/\/\/# sourceMappingURL=(.+)\.map/g, '/* remove source map */'))
+    .pipe(dest('dist/xcbase'))
+    .pipe(gizp({ threshold: '1kb', level: 7 }))
+    .pipe(dest('dist/xcbase'))
 }
 function vendorSpa () {
   return src([
@@ -165,4 +173,4 @@ function xcedCommonAssets () {
 
 const xceduCommon = parallel(xcedCommonScripts, xcedCommonTheme, xcedCommonAssets)
 
-exports.build = parallel(vendorFramework, vendorElement, vendorPolyfill, xceduCommon)
+exports.build = parallel(vendorFramework, vendorElement, vendorPolyfill, vendorXcBase, xceduCommon)
