@@ -59,6 +59,11 @@ function vendorXcBase () {
     .pipe(gizp({ threshold: '1kb', level: 7 }))
     .pipe(dest('dist/xcbase'))
 }
+function vendorXcBasePublic () {
+  return src([
+    './xcbase/public/**/*'
+  ]).pipe(dest('dist/xcbase/public'))
+}
 function vendorSpa () {
   return src([
     './node_modules/single-spa/lib/umd/single-spa.min.js',
@@ -173,4 +178,4 @@ function xcedCommonAssets () {
 
 const xceduCommon = parallel(xcedCommonScripts, xcedCommonTheme, xcedCommonAssets)
 
-exports.build = parallel(vendorFramework, vendorElement, vendorPolyfill, vendorXcBase, xceduCommon)
+exports.build = parallel(vendorFramework, vendorElement, vendorPolyfill, vendorXcBase, vendorXcBasePublic, xceduCommon)
