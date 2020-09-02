@@ -66,6 +66,8 @@
       .el-avatar {
         background-color:transparent;
         color: $--color-primary;
+        position: relative;
+        top: 2px;
         &.user-name {
           background: $--color-primary;
           color: #fff;
@@ -107,7 +109,8 @@
     .el-menu-item {
       font-size: 16px;
       position: relative;
-
+      height: 44px;
+      line-height: 38px;
       &.is-active {
         color: $--color-primary;
       }
@@ -134,6 +137,8 @@
 
       i {
         color: $--color-white;
+        margin-right: 6px;
+        font-size: $--font-size-extra-large;
       }
 
       > .el-menu-item {

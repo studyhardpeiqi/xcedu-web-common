@@ -1,21 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
+}
+
+body {
   margin: 0;
   padding: 0;
-}
-
-body > div[id*="single-spa-application"] {
-  height: 100%;
-}
-
-body{
+  font-size: 14px;
   background: #f8f8f8;
   overflow: hidden;
 }
 
-* {
-  font-size: 14px;
+body > div[id*="single-spa-application"] {
+  height: 100%;
 }
 
 a {
@@ -45,4 +46,18 @@ i,em {
 .el-pagination.is-background .btn-prev,
 .el-pagination.is-background .el-pager li:not(.active) {
   background-color: transparent !important;
+}
+
+.el-avatar>img {
+  width: 100%;
+}
+
+.el-date-editor .el-range-separator {
+  box-sizing: content-box;
+}
+
+.el-image-viewer__close {
+  background-color: #606266;
+  color: #fff;
+  border-radius: 6px;
 }
