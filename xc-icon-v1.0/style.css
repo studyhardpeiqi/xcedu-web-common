@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'xc-icon';
-  src:  url('fonts/xc-icon.eot?94ky5q');
-  src:  url('fonts/xc-icon.eot?94ky5q#iefix') format('embedded-opentype'),
-    url('fonts/xc-icon.ttf?94ky5q') format('truetype'),
-    url('fonts/xc-icon.woff?94ky5q') format('woff'),
-    url('fonts/xc-icon.svg?94ky5q#xc-icon') format('svg');
+  src:  url('fonts/xc-icon.eot?o112q8');
+  src:  url('fonts/xc-icon.eot?o112q8#iefix') format('embedded-opentype'),
+    url('fonts/xc-icon.ttf?o112q8') format('truetype'),
+    url('fonts/xc-icon.woff?o112q8') format('woff'),
+    url('fonts/xc-icon.svg?o112q8#xc-icon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13,7 +13,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'xc-icon' !important;
-  speak: none;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -976,7 +976,7 @@
 .icon-zan:before {
   content: "\f134";
 }
-.icon-sxpj-solid:before {
+.icon-xueshengzonghesuzhipingjia-xian:before {
   content: "\f135";
 }
 .icon-nv:before {
