@@ -52,18 +52,8 @@ function vendorPolyfill () {
 }
 function vendorXcBase () {
   return src([
-    './xcbase/xcedu-share.js',
-    './xcbase/xcedu-components.js'
-  ]).pipe(concat('xcbase.js'))
-    .pipe(replace(/\/\/# sourceMappingURL=(.+)\.map/g, '/* remove source map */'))
-    .pipe(dest('dist/xcbase'))
-    .pipe(gizp({ threshold: '1kb', level: 7 }))
-    .pipe(dest('dist/xcbase'))
-}
-function vendorXcBasePublic () {
-  return src([
-    './xcbase/public/**/*'
-  ]).pipe(dest('dist/xcbase/public'))
+    './xcbase/**/*'
+  ]).pipe(dest('dist/xcbase'))
 }
 function vendorSpa () {
   return src([
@@ -184,4 +174,4 @@ function xcedCommonAssets () {
 
 const xceduCommon = parallel(xcedCommonScripts, xcedCommonTheme, xcedCommonAssets)
 
-exports.build = parallel(vendorFramework, vendorElement, vendorPolyfill, vendorXcBase, vendorXcBasePublic, xceduCommon)
+exports.build = parallel(vendorFramework, vendorElement, vendorPolyfill, vendorXcBase, xceduCommon)
