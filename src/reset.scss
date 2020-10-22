@@ -42,6 +42,11 @@ i,em {
   font-style: normal;
 }
 
+/* 选择组织用户弹框，选中的人员前面蓝点不居中问题 */
+.ztree .button.chk {
+  box-sizing: content-box;
+}
+
 .el-pagination.is-background .btn-next,
 .el-pagination.is-background .btn-prev,
 .el-pagination.is-background .el-pager li:not(.active) {
