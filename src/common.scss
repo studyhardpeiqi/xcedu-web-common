@@ -423,6 +423,11 @@ section {
   box-sizing: border-box;
 }
 
+.el-dialog__body {
+  height: calc(100% - 50px);
+  overflow: auto;
+}
+
 .el-table__body .oprate-icon-groups i:hover {
   color: $--color-primary
 }
