@@ -66,3 +66,7 @@ i,em {
   color: #fff;
   border-radius: 6px;
 }
+
+.el-tabs__nav-wrap::after {
+  height: 1px !important;
+}
