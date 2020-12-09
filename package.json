@@ -16,6 +16,7 @@
     "theme:blue": "et -c src/themes/variables-blue.scss -o themes/blue",
     "theme:orange": "et -c src/themes/variables-orange.scss -o themes/orange",
     "theme:red": "et -c src/themes/variables-red.scss -o themes/red",
+    "theme:dark": "et -c src/themes/variables-dark.scss -o themes/dark",
     "build:deploy": "run-s clean theme gulp",
     "lint": "npm-run-all lint:*",
     "lint:scripts": "eslint --ext js,vue,ts gulpfile.js",
