@@ -116,7 +116,7 @@ function elementTheme (theme) {
   }
 }
 
-const elementThemeTasks = ['blue', 'green', 'orange', 'red'].map(item => elementTheme(item))
+const elementThemeTasks = ['blue', 'green', 'orange', 'red', 'dark'].map(item => elementTheme(item))
 
 const vendorElementTheme = parallel(...elementThemeTasks)
 
@@ -159,7 +159,7 @@ function xceduTheme (theme) {
   }
 }
 
-const commonThemeTasks = ['blue', 'green', 'orange', 'red'].map(theme => {
+const commonThemeTasks = ['blue', 'green', 'orange', 'red', 'dark'].map(theme => {
   return xceduTheme(theme)
 })
 
