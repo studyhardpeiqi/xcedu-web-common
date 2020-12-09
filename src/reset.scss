@@ -47,10 +47,15 @@ i,em {
   box-sizing: content-box;
 }
 
+.el-pagination.is-background {
+  background-color: #fff;
+  font-weight: normal;
+}
 .el-pagination.is-background .btn-next,
 .el-pagination.is-background .btn-prev,
 .el-pagination.is-background .el-pager li:not(.active) {
   background-color: transparent !important;
+  border: 1px solid #ededed;
 }
 
 .el-avatar>img {
@@ -65,4 +70,8 @@ i,em {
   background-color: #606266;
   color: #fff;
   border-radius: 6px;
+}
+
+.el-tabs__nav-wrap::after {
+  height: 1px !important;
 }
