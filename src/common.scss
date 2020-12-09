@@ -677,3 +677,19 @@ section {
   margin-left:-20px;
   margin-right: -20px;
 }
+
+//左侧菜单
+.el-verticle-menu .el-menu-item.is-active{
+  border-left:4px solid $--color-primary;
+  background: $--color-primary-light-9!important;
+}
+
+.borderbottom2{
+  border-bottom: 2px solid $--color-primary;
+}
+
+//el-input slot = append
+.appendButtonStyle:hover{
+  color:$--color-primary!important;
+  background-color: $--color-primary-light-9!important;
+}
